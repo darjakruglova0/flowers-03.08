@@ -1,0 +1,126 @@
+
+$fonts: "Playfair Display", serif;
+$main-fonts:'Open Sans', sans-serif;
+$main-color: #3d3137;
+$text-color: #fff;
+$text-color_dark:#A7A4A5;
+$text-color_black:#000;
+$text-active: #cc9744;
+$gradient-color:linear-gradient(211deg, #C38B34 27.99%, #ECC47E 80.38%);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+ 
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-family: $main-fonts;
+}
+a{
+  color:$text-color_dark;
+  text-decoration: none;
+}
+a:hover{
+    color: $text-active
+}
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-family: $main-fonts;
+  font-weight: 400;
+}
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+.btn{
+  border-radius: 5px;
+}
+
+
+.block__title {
+  font-family: $fonts;
+  font-size: calc(25px + 30 * (100vw - 400px) / 1920);
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 50px;
+
+}
+
+.section{
+ 
+padding-top: calc(25px + 60 * (100vw - 400px) / 1920);
+padding-bottom: calc(25px + 60 * (100vw - 400px) / 1920);
+}
+

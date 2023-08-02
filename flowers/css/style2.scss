@@ -1,0 +1,144 @@
+@import "style-general.scss";
+
+
+/*меню*/
+.header{
+  &__soc{
+    display: flex;
+    gap: 2em;
+      }
+  &__card{
+   font-size: 12px;
+   display: flex;
+   align-items: center;
+   &-item{
+    display: flex;
+   align-items: center;
+
+   .total_count{
+margin-left: 4px;
+   }
+    &:first-child {
+      
+      margin-right: calc(20px + 20 * (100vw - 400px) / 1920);
+    }
+    img{
+      margin-right: 11px;
+    }
+  }
+  }
+  &__bottom{
+  display: flex;
+  align-items: center;
+  padding: 15px 0 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+&__menu{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  &-item{
+    padding: 0 13px 0 13px;
+    font-size: calc(10px + 5 * (100vw - 400px) / 1920);
+  
+}
+
+  }
+}
+
+.dropdown{
+  &__svg{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    position: relative;
+    border-color: inherit;
+  }
+  position: relative;
+  outline: none;
+  
+  &__item{ 
+    color: $text-color_black;
+    background: #D9D9D9;
+    padding: 6px 11px;
+    border-bottom: 0.1px solid $main-color;
+    display: block;
+    font-size: 11px;
+  width: 133px;
+    &:hover{
+      background:$gradient-color;
+      color:#fff;
+
+    }
+    &:active{
+      background:$gradient-color;
+      color:#fff
+    }
+
+  }
+
+&-content{
+  display: none;
+  position: absolute;
+ // margin-top: 10px;
+  border-radius: 0px 0px 2px 2px;
+padding-top: 15px;
+z-index: 1;
+}
+}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+
+
+
+
+@media (max-width: 1800px){
+  .header{
+    &__soc{
+      display: block;
+    }
+  }
+  }
+
+
+  @media (max-width: 1100px){
+    .header__menu-item {
+      padding:0;
+      width: 100%;
+      
+      .dropdown__item {
+      
+      
+   
+        border-bottom: 0.1px solid #3d3137;
+        display: block;
+        width: 100%;
+        font-size: 8px;
+        /* width: 133px; */
+    }
+  }
+    }
+  
+
+    @media (max-width: 978px){
+     .header{
+    &__body{
+        &__form{
+width: auto;}
+     
+      }
+      &__card{
+        span{
+          display: none;
+        }
+        &-item{
+          img{
+            margin-right: 6px;
+          }
+        }
+      }
+     }
+      }
